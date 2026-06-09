@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio of a Global Software Engineer. Showcase of projects, skills, and experience with English and Korean support.">
+    <title>Global Software Engineer | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme lang-en">
+    <!-- Background Elements -->
+    <div class="bg-blur-sphere sphere-1"></div>
+    <div class="bg-blur-sphere sphere-2"></div>
+    <div class="bg-blur-sphere sphere-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-accent">&lt;</span>Developer<span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link" data-i18n="nav-about">About</a></li>
+                    <li><a href="#skills" class="nav-link" data-i18n="nav-skills">Skills</a></li>
+                    <li><a href="#experience" class="nav-link" data-i18n="nav-experience">Experience</a></li>
+                    <li><a href="#projects" class="nav-link" data-i18n="nav-projects">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="lang-switch-container">
+                    <button class="lang-btn active" id="lang-en-btn">EN</button>
+                    <span class="lang-separator">|</span>
+                    <button class="lang-btn" id="lang-ko-btn">KO</button>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-sun theme-icon-sun"></i>
+                    <i class="fas fa-moon theme-icon-moon"></i>
+                </button>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span data-i18n="hero-badge-text">Open for Global Opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span data-i18n="hero-title-hello">Hi, I'm</span> 
+                    <span class="text-gradient highlight-name" data-i18n="hero-title-name">Gildong Hong</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span id="typed-text">Full Stack Developer</span><span class="typed-cursor">|</span>
+                </h2>
+                <p class="hero-description" data-i18n="hero-description-text">
+                    I build high-performance web applications with clean architecture and modern user experiences. Bridging the gap between robust backend systems and beautiful frontend designs.
+                </p>
+                
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero-cta-projects">
+                        View Projects <i class="fas fa-arrow-right icon-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero-cta-contact">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://velog.io" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Blog">
+                        <i class="fas fa-blog"></i>
+                    </a>
+                    <a href="mailto:contact@example.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <div class="visual-card main-card">
+                        <div class="card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="card-title">developer.js</span>
+                        </div>
+                        <div class="card-body">
+                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">'Gildong Hong'</span>,
+  <span class="property">role</span>: <span class="string">'Full Stack Engineer'</span>,
+  <span class="property">skills</span>: [<span class="string">'React'</span>, <span class="string">'Node.js'</span>, <span class="string">'TypeScript'</span>, <span class="string">'Docker'</span>],
+  <span class="property">passion</span>: <span class="string">'Scalable Web & UX Design'</span>,
+  <span class="property">relocate</span>: <span class="keyword">true</span>,
+  <span class="property">location</span>: <span class="string">'Seoul, South Korea / Remote'</span>
+};</code></pre>
+                        </div>
+                    </div>
+                    <div class="visual-card floating-card-1">
+                        <div class="floating-icon"><i class="fab fa-react"></i></div>
+                        <div class="floating-text">React & Next.js</div>
+                    </div>
+                    <div class="visual-card floating-card-2">
+                        <div class="floating-icon"><i class="fab fa-node-js"></i></div>
+                        <div class="floating-text">Node.js API</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient" data-i18n="about-title">About Me</h2>
+                    <p class="section-subtitle" data-i18n="about-subtitle">My journey, values, and why we should work together.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-image-wrapper">
+                        <img src="assets/profile.png" alt="Developer Avatar" class="about-profile-img">
+                        <div class="experience-badge-large">
+                            <span class="exp-years">3+</span>
+                            <span class="exp-text" data-i18n="about-exp-badge">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-info">
+                        <h3 class="about-heading" data-i18n="about-heading-text">Engineering solutions with a global perspective</h3>
+                        <p class="about-description" data-i18n="about-p1">
+                            I am a software engineer based in Seoul, South Korea, specializing in building modern web applications. With experience working in multicultural environments and global teams, I have developed a strong communication mindset and an adaptable approach to technology.
+                        </p>
+                        <p class="about-description" data-i18n="about-p2">
+                            I believe in writing clean, maintainable code, optimizing performance, and designing intuitive user interfaces. My goal is to build digital products that solve real-world problems and scale effectively under load.
+                        </p>
+                        
+                        <div class="about-details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label" data-i18n="about-label-education">Education</span>
+                                <span class="detail-value" data-i18n="about-value-education">B.S. in Computer Science, Seoul National University</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-i18n="about-label-languages">Languages</span>
+                                <span class="detail-value" data-i18n="about-value-languages">Korean (Native), English (Fluent / Professional)</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-i18n="about-label-interests">Specialty</span>
+                                <span class="detail-value" data-i18n="about-value-interests">SPA Architecture, RESTful APIs, DevOps, Performance Optimization</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label" data-i18n="about-label-work">Work Preference</span>
+                                <span class="detail-value" data-i18n="about-value-work">In-office (Seoul/Global), Remote, Hybrid</span>
+                            </div>
+                        </div>
+
+                        <div class="about-cv-buttons">
+                            <a href="#" class="btn btn-secondary" id="cv-en-btn">
+                                <i class="fas fa-file-pdf icon-left"></i> Resume (English)
+                            </a>
+                            <a href="#" class="btn btn-secondary" id="cv-ko-btn">
+                                <i class="fas fa-file-pdf icon-left"></i> 이력서 (Korean)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section section-padding" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient" data-i18n="skills-title">Technical Skills</h2>
+                    <p class="section-subtitle" data-i18n="skills-subtitle">My toolbox of technologies and languages that I use to bring ideas to life.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Frontend Category -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <i class="fas fa-laptop-code skills-icon text-gradient"></i>
+                            <h3 data-i18n="skills-cat-frontend">Frontend</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-info">
+                                    <span>React / Next.js</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 95%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>TypeScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>HTML5 / CSS3 / JavaScript</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 95%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>Tailwind CSS / Sass</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 90%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend Category -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <i class="fas fa-server skills-icon text-gradient"></i>
+                            <h3 data-i18n="skills-cat-backend">Backend</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-info">
+                                    <span>Node.js / Express</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>Python / Django / FastAPI</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>PostgreSQL / MySQL</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>GraphQL / RESTful API Design</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 90%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- DevOps & Tools Category -->
+                    <div class="skills-card">
+                        <div class="skills-card-header">
+                            <i class="fas fa-toolbox skills-icon text-gradient"></i>
+                            <h3 data-i18n="skills-cat-tools">DevOps & Tools</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-info">
+                                    <span>Git / GitHub Action CI/CD</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>Docker</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>AWS (S3, EC2, CloudFront)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-info">
+                                    <span>Linux / Shell Scripting</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 75%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-badges">
+                    <h4 class="badges-title" data-i18n="skills-familiar">Other Tech I Work With:</h4>
+                    <div class="badge-container">
+                        <span class="badge">Next.js</span>
+                        <span class="badge">NestJS</span>
+                        <span class="badge">Redis</span>
+                        <span class="badge">MongoDB</span>
+                        <span class="badge">Jest</span>
+                        <span class="badge">Prisma</span>
+                        <span class="badge">Firebase</span>
+                        <span class="badge">WebSockets</span>
+                        <span class="badge">Kubernetes</span>
+                        <span class="badge">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section class="experience-section section-padding" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient" data-i18n="exp-title">Work Experience</h2>
+                    <p class="section-subtitle" data-i18n="exp-subtitle">My professional growth and key achievements.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024.03 - Present</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="exp1-role">Senior Full Stack Engineer</h3>
+                            <h4 class="timeline-company" data-i18n="exp1-company">TechWave Global, Seoul</h4>
+                            <p class="timeline-desc" data-i18n="exp1-desc">
+                                Led the development of a cross-border SaaS dashboard using Next.js and Go. Optimized DB queries to improve dashboard load times by 40%. Managed a global agile team of 5 developers.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Next.js</span>
+                                <span class="timeline-tag">Go</span>
+                                <span class="timeline-tag">PostgreSQL</span>
+                                <span class="timeline-tag">Docker</span>
+                                <span class="timeline-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022.06 - 2024.02</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="exp2-role">Web Developer</h3>
+                            <h4 class="timeline-company" data-i18n="exp2-company">InnoLabs Korea, Seoul</h4>
+                            <p class="timeline-desc" data-i18n="exp2-desc">
+                                Re-architected a legacy monolith platform into React micro-frontends. Implemented real-time tracking features using WebSockets. Collaborated closely with international clients for service localization.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">React</span>
+                                <span class="timeline-tag">TypeScript</span>
+                                <span class="timeline-tag">Node.js</span>
+                                <span class="timeline-tag">WebSocket</span>
+                                <span class="timeline-tag">Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021.09 - 2022.03</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="exp3-role">Software Engineer Intern</h3>
+                            <h4 class="timeline-company" data-i18n="exp3-company">VentureLink, Remote / US</h4>
+                            <p class="timeline-desc" data-i18n="exp3-desc">
+                                Contributed to the development of internal automation workflows using Python. Participated in daily standups in English, resolving frontend bugs and setting up CI/CD pipeline tests.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Python</span>
+                                <span class="timeline-tag">Django</span>
+                                <span class="timeline-tag">JavaScript</span>
+                                <span class="timeline-tag">GitHub Actions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section section-padding" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient" data-i18n="projects-title">Featured Projects</h2>
+                    <p class="section-subtitle" data-i18n="projects-subtitle">A collection of systems and applications I've developed, from concept to deployment.</p>
+                </div>
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter-all">All</button>
+                    <button class="filter-btn" data-filter="frontend" data-i18n="filter-frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="fullstack" data-i18n="filter-fullstack">Fullstack</button>
+                    <button class="filter-btn" data-filter="devops" data-i18n="filter-devops">DevOps/API</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="fullstack">
+                        <div class="project-img-container">
+                            <img src="assets/project1.png" alt="Global Collaborative Workspace" class="project-card-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                    <a href="https://demo.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">Socket.io</span>
+                            </div>
+                            <h3 class="project-card-title" data-i18n="project1-title">Global Collaborative Workspace</h3>
+                            <p class="project-card-desc" data-i18n="project1-desc">
+                                A real-time collaboration tool with document editing, interactive canvas, and live voice rooms. Specially localized for English and Korean operations, serving over 10k monthly active users.
+                            </p>
+                            <a href="#" class="project-details-link" data-i18n="project-details-btn">View Details <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="frontend">
+                        <div class="project-img-container">
+                            <img src="assets/project2.png" alt="Dynamic Portfolio Builder" class="project-card-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                    <a href="https://demo.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="project-tag">Next.js</span>
+                                <span class="project-tag">TypeScript</span>
+                                <span class="project-tag">Tailwind CSS</span>
+                            </div>
+                            <h3 class="project-card-title" data-i18n="project2-title">Dynamic Portfolio Builder</h3>
+                            <p class="project-card-desc" data-i18n="project2-desc">
+                                An interactive SaaS application allowing developers to build and export portfolios instantly. Features high-quality theme templates and custom SEO configurations with zero-latency previewing.
+                            </p>
+                            <a href="#" class="project-details-link" data-i18n="project-details-btn">View Details <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="devops">
+                        <div class="project-img-container">
+                            <img src="assets/project3.png" alt="High-Throughput Analytics API" class="project-card-img">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+                                    <a href="https://demo.com" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="project-tag">FastAPI</span>
+                                <span class="project-tag">Docker</span>
+                                <span class="project-tag">Redis</span>
+                                <span class="project-tag">AWS</span>
+                            </div>
+                            <h3 class="project-card-title" data-i18n="project3-title">High-Throughput Analytics API</h3>
+                            <p class="project-card-desc" data-i18n="project3-desc">
+                                A high-throughput, horizontally scaling ingestion microservice capable of processing 50,000 requests per second. Built using Redis queue and FastAPI, containerized and monitored via Prometheus.
+                            </p>
+                            <a href="#" class="project-details-link" data-i18n="project-details-btn">View Details <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient" data-i18n="contact-title">Get In Touch</h2>
+                    <p class="section-subtitle" data-i18n="contact-subtitle">Have a job opportunity, project idea, or just want to connect? Drop a message!</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info Card -->
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title" data-i18n="contact-info-heading">Contact Information</h3>
+                        <p class="contact-info-desc" data-i18n="contact-info-text">
+                            I am actively seeking full-time opportunities as a Full Stack / Frontend / Backend Engineer. Let's build something remarkable.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-detail-text">
+                                    <span class="contact-label" data-i18n="contact-label-email">Email</span>
+                                    <a href="mailto:contact@example.com" class="contact-value">contact@example.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-detail-text">
+                                    <span class="contact-label" data-i18n="contact-label-phone">Phone / KakaoTalk</span>
+                                    <span class="contact-value" data-i18n="contact-value-phone">+82 (0)10-1234-5678</span>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-detail-text">
+                                    <span class="contact-label" data-i18n="contact-label-location">Location</span>
+                                    <span class="contact-value" data-i18n="contact-value-location">Seoul, South Korea (Available for Relocation)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://velog.io" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Blog"><i class="fas fa-blog"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="form-name" class="form-label" data-i18n="contact-form-label-name">Name</label>
+                                    <input type="text" id="form-name" class="form-input" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email" class="form-label" data-i18n="contact-form-label-email">Email</label>
+                                    <input type="email" id="form-email" class="form-input" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject" class="form-label" data-i18n="contact-form-label-subject">Subject</label>
+                                <input type="text" id="form-subject" class="form-input" placeholder="Job Opportunity / Project" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message" class="form-label" data-i18n="contact-form-label-message">Message</label>
+                                <textarea id="form-message" class="form-input form-textarea" placeholder="Hi, I'd like to talk about..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn" data-i18n="contact-form-submit">
+                                Send Message <i class="fas fa-paper-plane icon-right"></i>
+                            </button>
+                        </form>
+                        <div id="form-feedback" class="form-feedback-message hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">
+                &copy; 2026 Gildong Hong. <span data-i18n="footer-rights">All rights reserved.</span>
+            </p>
+            <div class="footer-bottom-links">
+                <a href="#about" data-i18n="nav-about">About</a>
+                <a href="#projects" data-i18n="nav-projects">Projects</a>
+                <a href="#contact" data-i18n="nav-contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>

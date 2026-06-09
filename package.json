@@ -1,0 +1,24 @@
+{
+  "name": "global-portfolio",
+  "version": "1.0.0",
+  "description": "Bilingual (English/Korean) developer portfolio designed for global and local recruiters",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "portfolio",
+    "bilingual",
+    "korean",
+    "english",
+    "resume",
+    "developer"
+  ],
+  "author": "Gildong Hong",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}
