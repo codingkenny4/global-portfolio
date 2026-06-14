@@ -16,7 +16,7 @@
     "resume",
     "developer"
   ],
-  "author": "Gildong Hong",
+  "author": "Yongbae Hong",
   "license": "MIT",
   "devDependencies": {
     "vite": "^5.2.0"
