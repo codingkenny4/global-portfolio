@@ -428,57 +428,43 @@ function initProjectFilters() {
 }
 
 // ==========================================================================
-// CONTACT FORM SUBMISSION MOCK
+// CONTACT FORM SUBMISSION (MAILTO)
 // ==========================================================================
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    const feedback = document.getElementById('form-feedback');
-    const submitBtn = document.getElementById('form-submit-btn');
     
-    if (!form || !feedback) return;
+    if (!form) return;
     
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Show loading state
-        submitBtn.disabled = true;
-        const prevContent = submitBtn.innerHTML;
-        submitBtn.innerHTML = currentLang === 'en' ? 'Sending... <i class="fas fa-spinner fa-spin icon-right"></i>' : '보내는 중... <i class="fas fa-spinner fa-spin icon-right"></i>';
+        const name = document.getElementById('form-name').value;
+        const email = document.getElementById('form-email').value;
+        const subject = document.getElementById('form-subject').value;
+        const message = document.getElementById('form-message').value;
         
-        // Simulate API request delay
+        // Validate all fields are filled
+        if (!name || !email || !subject || !message) {
+            alert(currentLang === 'en' 
+                ? "Please fill out all fields." 
+                : "모든 입력창을 채워주세요.");
+            return;
+        }
+        
+        // Build mailto link with form data
+        const mailtoSubject = encodeURIComponent(`${subject}`);
+        const mailtoBody = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        );
+        const mailtoLink = `mailto:codingyongbae@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Reset form after opening email
         setTimeout(() => {
-            const name = document.getElementById('form-name').value;
-            const email = document.getElementById('form-email').value;
-            const subject = document.getElementById('form-subject').value;
-            const message = document.getElementById('form-message').value;
-            
-            // Mock response
-            if (name && email && subject && message) {
-                feedback.className = 'form-feedback-message success';
-                feedback.textContent = currentLang === 'en' 
-                    ? "Thank you! Your message has been sent successfully." 
-                    : "감사합니다! 메시지가 성공적으로 전송되었습니다.";
-                form.reset();
-            } else {
-                feedback.className = 'form-feedback-message error';
-                feedback.textContent = currentLang === 'en' 
-                    ? "Oops! Please make sure all fields are filled out correctly." 
-                    : "오류가 발생했습니다! 모든 입력창을 올바르게 채워주세요.";
-            }
-            
-            // Show feedback block
-            feedback.classList.remove('hidden');
-            
-            // Restore button
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = prevContent;
-            
-            // Hide feedback after 5 seconds
-            setTimeout(() => {
-                feedback.classList.add('hidden');
-            }, 5000);
-            
-        }, 1500);
+            form.reset();
+        }, 500);
     });
 }
 
