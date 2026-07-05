@@ -488,20 +488,22 @@ function initResumeDownloads() {
     if (cvEnBtn) {
         cvEnBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const alertMsg = currentLang === 'en' 
-                ? "English Resume PDF download triggered! In production, replace this with your direct PDF file link." 
-                : "영문 이력서 PDF 다운로드가 실행되었습니다! 실배포 시 실제 PDF 파일 링크로 교체하세요.";
-            alert(alertMsg);
+            window.open(
+                'https://www.dropbox.com/scl/fi/w3vd8nq4nd4l4gmox3vdt/YongbaeHong-cv-2026-en.pdf?rlkey=53oipzi3ko9cfnuxz7sr10c7t&st=ye8o6i3o&dl=1',
+                '_blank',
+                'noopener,noreferrer'
+            );
         });
     }
     
     if (cvKoBtn) {
         cvKoBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const alertMsg = currentLang === 'en' 
-                ? "Korean Resume PDF download triggered! In production, replace this with your direct PDF file link." 
-                : "국문 이력서 PDF 다운로드가 실행되었습니다! 실배포 시 실제 PDF 파일 링크로 교체하세요.";
-            alert(alertMsg);
+            window.open(
+                'https://www.dropbox.com/scl/fi/2f0hf6tei4mkpxue9geww/YongbaeHong-cv-2026-kr.pdf?rlkey=znx3945jgmj1luruees4g55s5&st=1o684yba&dl=1',
+                '_blank',
+                'noopener,noreferrer'
+            );
         });
     }
 }
