@@ -469,36 +469,6 @@ function initContactForm() {
 }
 
 // ==========================================================================
-// DOWNLOAD RESUME HANDLER (MOCK ALERTS)
-// ==========================================================================
-function initResumeDownloads() {
-    const cvEnBtn = document.getElementById('cv-en-btn');
-    const cvKoBtn = document.getElementById('cv-ko-btn');
-    
-    if (cvEnBtn) {
-        cvEnBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.open(
-                'https://www.dropbox.com/scl/fi/w3vd8nq4nd4l4gmox3vdt/YongbaeHong-cv-2026-en.pdf?rlkey=53oipzi3ko9cfnuxz7sr10c7t&st=ye8o6i3o&dl=1',
-                '_blank',
-                'noopener,noreferrer'
-            );
-        });
-    }
-    
-    if (cvKoBtn) {
-        cvKoBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.open(
-                'https://www.dropbox.com/scl/fi/2f0hf6tei4mkpxue9geww/YongbaeHong-cv-2026-kr.pdf?rlkey=znx3945jgmj1luruees4g55s5&st=1o684yba&dl=1',
-                '_blank',
-                'noopener,noreferrer'
-            );
-        });
-    }
-}
-
-// ==========================================================================
 // DOCUMENT INIT
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -507,7 +477,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initProjectFilters();
     initContactForm();
-    initResumeDownloads();
     
     // Add scroll event listeners
     window.addEventListener('scroll', handleScroll);
